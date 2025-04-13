@@ -1,4 +1,6 @@
-public class MyArrayList<T> implements MyList<T>{
+import interfaces.MyList;
+
+public class MyArrayList<T> implements MyList<T> {
     private Object[] elements;
     private int lenght;
 
@@ -42,11 +44,17 @@ public class MyArrayList<T> implements MyList<T>{
         lenght = 0;
     }
 
-    public void remove(int index){
+    public T remove(int index){
         checkIndex(index);
-        for(int i = index; i < lenght - 1; i++){
-            elements[i] = elements[i+1];
+        T temp = (T) elements[index];
+        for(int i = index; i < lenght - 1; i++) {
+            elements[i] = elements[i + 1];
         }
         lenght--;
+        return temp;
+    }
+
+    public boolean isEmpty() {
+        return lenght == 0;
     }
 }

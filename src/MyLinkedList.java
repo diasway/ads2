@@ -30,8 +30,8 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
     @Override
-    public void remove(int index) {
-
+    public T remove(int index) {
+        return null;
     }
 
     @Override
