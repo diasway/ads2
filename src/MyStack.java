@@ -1,20 +1,23 @@
+import interfaces.MyList;
+
 public class MyStack<T> {
-    private MyArrayList<T> list = new MyArrayList<>();
+    private final MyList<T> list = new MyArrayList<>();
 
-    public MyStack(MyArrayList<T> list){
-        this.list = list;
-    }
-
-    public void push(T value) {
-        list.add(value);
+    public void push(T item) {
+        list.addLast(item);
     }
 
     public T pop() {
-        if (list.isEmpty()) return null;
-        return list.remove(list.size() - 1);
+        T last = list.getLast();
+        list.removeLast();
+        return last;
+    }
+
+    public T peek() {
+        return list.getLast();
     }
 
     public boolean isEmpty() {
-        return list.isEmpty();
+        return list.size() == 0;
     }
 }
