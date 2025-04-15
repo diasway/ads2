@@ -2,6 +2,9 @@ import interfaces.MyList;
 
 import java.util.Iterator;
 
+/**
+ * A custom doubly linked list implementation with support for indexed access and bidirectional iteration.
+ * */
 public class MyLinkedList<T> implements MyList<T> {
     private class MyNode {
         T data;

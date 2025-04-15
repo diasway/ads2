@@ -3,6 +3,11 @@ import interfaces.MyList;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ * A simplified custom implementation of a dynamic array (ArrayList-like).
+ * Supports basic operations like add, get, set, remove, and automatic resizing.
+ */
+
 public class MyArrayList<T> implements MyList<T> {
     private Object[] elements;
     private int length;

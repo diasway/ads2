@@ -19,5 +19,7 @@ public class Main {
         minHeap.add(8);
         minHeap.add(1);
         minHeap.add(2);
+        System.out.println(minHeap.size());
+        System.out.println(minHeap.peek());
     }
 }

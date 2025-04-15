@@ -1,5 +1,8 @@
 import interfaces.MyList;
 
+/**
+ * A simple generic implementation of a stack (LIFO) using a dynamic array.
+ */
 public class MyStack<T> {
     private final MyList<T> list = new MyArrayList<>();
 

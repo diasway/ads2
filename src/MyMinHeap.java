@@ -1,5 +1,9 @@
 import interfaces.MyList;
-
+/**
+ * A generic implementation of a Min-Heap data structure using MyArrayList.
+ * This class supports typical heap operations such as add, poll (remove min), and peek.
+ * Elements must be Comparable so that heap properties can be maintained.
+ */
 public class MyMinHeap<T extends Comparable<T>> {
     private final MyArrayList<T> heap;
 

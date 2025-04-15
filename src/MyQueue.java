@@ -1,5 +1,9 @@
 import interfaces.MyList;
 
+
+/**
+ * A simple generic implementation of a queue (FIFO) using a linked list.
+ */
 public class MyQueue<T> {
     private final MyList<T> list = new MyLinkedList<>();
 
